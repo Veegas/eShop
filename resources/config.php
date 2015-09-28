@@ -12,8 +12,8 @@ $config = array(
     "db" => array(
         "db1" => array(
             "dbname" => "eshopDb",
-            "username" => "rawa7yalla",
-            "password" => "rawa7eshop",
+            "username" => "reesha",
+            "password" => "reeshaeshop",
             "host" => "localhost"
         )
     ),
@@ -23,8 +23,8 @@ $config = array(
     "paths" => array(
         "resources" => "/../resources",
         "images" => array(
-            "content" => $_SERVER["DOCUMENT_ROOT"] . "/images/content",
-            "layout" => $_SERVER["DOCUMENT_ROOT"] . "/images/layout"
+            "content" => $_SERVER["DOCUMENT_ROOT"] . "/img/content",
+            "layout" => $_SERVER["DOCUMENT_ROOT"] . "/img/layout"
         )
     )
 );
@@ -41,6 +41,9 @@ $config = array(
 */
 defined("LIBRARY_PATH")
     or define("LIBRARY_PATH", 'resources/library');
+
+defined("IMG_PATH")
+    or define("IMG_PATH", 'img');
      
 defined("TEMPLATES_PATH")
     or define("TEMPLATES_PATH", realpath(dirname(__FILE__) . '/templates'));

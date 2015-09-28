@@ -1,6 +1,34 @@
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
+
 .icon-block .material-icons {
-	font-size: inherit;
+    font-size: inherit;
+}
+
+.header-style {}
+
+.auth-tabs .tab a {
+    color: rgb(38, 166, 154)
+}
+
+.auth-tabs .tab a:hover {
+    color: #1B7A71;
+}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: rgb(38, 166, 154);
+    will-change: left, right;
+}
+
+#login {
+    margin-top: 1%;
+}
+
+#add-avatar {
+    position: relative;
+    left: 35%;
 }
