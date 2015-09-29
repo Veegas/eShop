@@ -20,13 +20,20 @@
 
 <nav class="teal lighten-1 header-style" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="<?php echo IMG_PATH ?>/feather.svg">Reesha</a>
-      <ul class="right hide-on-med-and-down">
+      <!-- <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
+      </ul> -->
+<!--       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+ -->      
+
+     <div class = "nav-auth">
+       <?php
+      require_once(TEMPLATES_PATH . "/authentication.php");
+  ?>
+     </div>
+ </div>
   </nav>
