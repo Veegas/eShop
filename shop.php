@@ -21,6 +21,15 @@ if (!$mysqli->real_connect('localhost', 'eShop')) {
 
 echo 'Success... ' . $mysqli->host_info . "\n";
 
+        if ($result = mysqli_query($mysqli, "SELECT * FROM Product LIMIT 10")) {
+            echo "Select returned %d rows.\n". mysqli_num_rows($result);
+
+            /* free result set */
+            mysqli_free_result($result);
+        }
+        echo $result . "FUCK ME";
+
+
  function __destruct()
 {
    mysqli_close($this->connection);
@@ -32,12 +41,20 @@ echo 'Success... ' . $mysqli->host_info . "\n";
     require_once("./resources/config.php");
      
     require_once(TEMPLATES_PATH . "/header.php");
-    require_once(TEMPLATES_PATH . "/authentication.php");
+    // require_once(TEMPLATES_PATH . "/authentication.php");
 ?>
 
 
 <div class ="container">
-    
+  <?php 
+        // $query = mysqli_query($mysqli, "SELECT * FROM `Product`");
+      if ($result = $mysqli->query("SELECT * FROM Product LIMIT 10")) {
+        printf("Select returned %d rows.\n", $result->num_rows);
+     }
+        echo "FUCK ME , ". $result;
+
+
+   ?>  
 </div>
 
 <?php

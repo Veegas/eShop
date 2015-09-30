@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 29, 2015 at 04:25 PM
+-- Generation Time: Sep 30, 2015 at 01:22 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -31,8 +31,17 @@ CREATE TABLE IF NOT EXISTS `Product` (
   `quantity` int(11) NOT NULL,
   `description` text NOT NULL,
   `ID` int(11) NOT NULL,
-  `photo` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `photo` text,
+  `product_name` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Product`
+--
+
+INSERT INTO `Product` (`price`, `quantity`, `description`, `ID`, `photo`, `product_name`) VALUES
+(200, 10, 'WOW', 1, '/img/chicken-hat.jpg', 'Farkha'),
+(200, 10, 'OMG', 2, '/img/chicken-hat.jpg', 'Deek');
 
 -- --------------------------------------------------------
 
@@ -93,7 +102,7 @@ ALTER TABLE `User_Product_Purchase`
 -- AUTO_INCREMENT for table `Product`
 --
 ALTER TABLE `Product`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `User`
 --
