@@ -32,12 +32,13 @@ echo 'Success... ' . $mysqli->host_info . "\n";
     require_once("./resources/config.php");
      
     require_once(TEMPLATES_PATH . "/header.php");
-    require_once(TEMPLATES_PATH . "/authentication.php");
 ?>
 
-
 <div class ="container">
-    
+     <!-- Modal Trigger -->
+   <!-- Modal Trigger -->
+
+          
 </div>
 
 <?php
