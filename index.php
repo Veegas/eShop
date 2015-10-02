@@ -35,8 +35,6 @@ echo 'Success... ' . $mysqli->host_info . "\n";
 ?>
 
 <div class ="container">
-     <!-- Modal Trigger -->
-   <!-- Modal Trigger -->
 
           
 </div>
