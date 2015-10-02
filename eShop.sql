@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 30, 2015 at 01:22 PM
+-- Generation Time: Oct 02, 2015 at 06:59 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -33,15 +33,17 @@ CREATE TABLE IF NOT EXISTS `Product` (
   `ID` int(11) NOT NULL,
   `photo` text,
   `product_name` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `Product`
 --
 
 INSERT INTO `Product` (`price`, `quantity`, `description`, `ID`, `photo`, `product_name`) VALUES
-(200, 10, 'WOW', 1, '/img/chicken-hat.jpg', 'Farkha'),
-(200, 10, 'OMG', 2, '/img/chicken-hat.jpg', 'Deek');
+(200, 10, 'WOW', 1, 'img/feather.svg', 'Farkha'),
+(200, 10, 'OMG', 2, 'img/chicken-hat.png', 'Deek'),
+(300, 10, 'Best Ducks in Town', 3, 'img/duck-hat.jpg', 'Duck'),
+(10, 10, 'Agwad anwa3 el ferakh', 4, 'img/chick-hat.jpg', 'Chick');
 
 -- --------------------------------------------------------
 
@@ -56,7 +58,14 @@ CREATE TABLE IF NOT EXISTS `User` (
   `first_name` text NOT NULL,
   `last_name` text NOT NULL,
   `avatar` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`email`, `ID`, `password`, `first_name`, `last_name`, `avatar`) VALUES
+('test@test.com', 1, 'test', 'test', 'test', '/img/cicken-hat.jpg');
 
 -- --------------------------------------------------------
 
@@ -102,12 +111,12 @@ ALTER TABLE `User_Product_Purchase`
 -- AUTO_INCREMENT for table `Product`
 --
 ALTER TABLE `Product`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `User`
 --
 ALTER TABLE `User`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
