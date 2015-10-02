@@ -2,8 +2,8 @@
   <html>
     <head>
       <!--Import Google Icon Font-->
-<!--       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- -->      <!--Import materialize.css-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
 	  <link href="<?php echo LIBRARY_PATH ?>/materialize/css/materialize.min.css" rel="stylesheet" type="text/css" />
 	  	  
 <!--  	  <link href="resources/library/materialize/css/materialize.min.css" rel="stylesheet" type="text/css" />
@@ -30,7 +30,7 @@
       </ul> -->
 <!--       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
  -->      
-  <a class="waves-effect waves-light btn modal-trigger right circular" href="#modal1">Modal</a>
+  <a class="waves-effect waves-light btn modal-trigger right deep-orange" id="login-btn" href="#modal1">Login/Signup</a>
 
   <!-- Modal Structure -->
   <div id="modal1" class="modal">

@@ -33,6 +33,40 @@
     left: 35%;
 }
 
-.nav-auth {
-    
+.nav-auth {}
+
+#login-btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.div-input-half-left {
+    width: 40%;
+    display: inline-block;
+    margin-right: 12%;
+}
+.div-input-half {
+    width: 40%;
+    display: inline-block;
+}
+.input-position{
+    position: relative;
+    top: -24px;
+}
+
+.row-edited{
+    margin-bottom: 0;
+}
+
+.input-full{
+    width: 90%;
+}
+
+.div-submit {
+    float: right;
+    margin-right: 7%;
+    margin-top: 4%;
 }
