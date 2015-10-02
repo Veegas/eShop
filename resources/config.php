@@ -12,8 +12,8 @@ $config = array(
     "db" => array(
         "db1" => array(
             "dbname" => "eShop",
-            "username" => "reesha",
-            "password" => "reeshaeshop",
+            "username" => "root",
+            "password" => "",
             "host" => "localhost"
         )
     ),
@@ -54,4 +54,10 @@ defined("TEMPLATES_PATH")
 ini_set("error_reporting", "true");
 error_reporting(E_ALL|E_STRCT);
  
+    $conn = mysqli_connect($config["db"]["db1"]["host"], $config["db"]["db1"]["username"], $config["db"]["db1"]["password"], $config["db"]["db1"]["dbname"]);
+    if (!$conn) {
+        die('connection problem ! -->' . mysqli_error());
+    } else {
+        echo "CONNECTED TO DATABASE";
+    }
 ?>
