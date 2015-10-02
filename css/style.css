@@ -37,14 +37,15 @@
     
 }
 .products-item {
-    height: 400px;
+    height: 450px;
 }
 .products-row {
     margin-top: 5%;
 }
 .products-img {
     width: auto;
-    height: 70%;
+    height: 65%;
     max-height: 100%;
     max-width: 100%;
+    cursor: pointer;
 }
