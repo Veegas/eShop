@@ -36,3 +36,20 @@
 .nav-auth {
     
 }
+.history-img {
+    width: 50%;
+}
+
+#history-name {
+    width: 20%;
+    font-size: larger;
+}
+
+#history-table {
+    width: 100%;
+}
+
+#history-description {
+    width: 20%;
+    font-size: 91%;
+}
