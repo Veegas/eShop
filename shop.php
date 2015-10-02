@@ -6,9 +6,14 @@
     // require_once(TEMPLATES_PATH . "/authentication.php");
 ?>
 
+<script>
+        var signIn = function signIn(event) {
+            $("#modal1").openModal();
+    }
+</script>
 
 <div class ="container">
-    <div class="row">
+    <div class="row products-row">
         
   <?php 
 
@@ -18,24 +23,41 @@
             // output data of each row
         while($row = mysqli_fetch_assoc($result)) {
 ?>  
-        <div class="col s12 md6 l4 ">
-            <img class="materialboxed" data-caption=<?php  echo $row["description"] ?> src="<?php echo $row['photo']; ?>" alt="" width="100%" height="auto">
-        <table class="product-caption">
+    <form class="buy-form" action="buy.php" method="post" onsubmit=<?php if (!isset($_SESSION["user"])) { echo "'event.preventDefault(); signIn();'"; } ?>>
+        <div class="col s4 md4 l4 products-item">
+        <input type="text" name="item-id" value="<?php echo $row["ID"]; ?>" hidden>
+            <img class="materialboxed products-img" data-caption="<?php  echo $row["description"] ?>" src="<?php echo $row['photo']; ?>" alt="" >
+            <table class="product-caption">
                 <tr>
-                    <td>
+                    <td class="left-align">
                         <?php echo $row["product_name"] ?>
                     </td>
-                    <td>
+                    <td class="right-align">
                         <?php echo $row["price"]; ?>$
                     </td>
                 </tr>
                 <tr>
-                    <td class="right">
-                        In Stock <?php echo $row["quantity"]?>
+                    <td class="left-align">
+                        <?php echo $row["quantity"] ?>
+                    </td>
+
+                    <td class="right-align">
+                        <?php if ($row["quantity"] > 0) { ?>
+                            <button class="btn waves-effect waves-light" type="submit" name="action">
+                                Buy
+                                <i class="material-icons right">shopping_cart</i>
+                            </button>
+                        <?php  } else { ?>
+                        <button class="btn disabled waves-effect waves-light">
+                            Out of Stock
+                            <i class="material-icons right">shopping_cart</i>
+                        </button>
+                    <?php  } ?>
                     </td>
                 </tr>
-        </table>
+            </table>
         </div>
+    </form>
            <?php 
         }
     } else {
