@@ -49,6 +49,9 @@
                             <button class="btn-floating waves-effect waves-light left cart-btn" type="button" onclick="addToCart(event);">
                                 <i class="material-icons right">add_shopping_cart</i>
                             </button>
+                            <button class="btn-floating waves-effect waves-light left remove-cart-btn deep-orange" type="button" onclick="removeFromCart(event);" style="display: none" >
+                                <i class="material-icons right">remove_circle_outline</i>
+                            </button>
                     </td>
 
                         <?php if ($row["quantity"] > 0) { ?>
@@ -88,7 +91,18 @@
         var addToCart = function addToCart(event) {
             var itemId = $(event.target).parents('form').find('.item-id-input').val();
             $.post('cart.php', {'itemId': itemId}, function(data) {
-                console.log(data);
+                $(event.target).parents('form').find('.cart-btn').hide();
+                $(event.target).parents('form').find('.remove-cart-btn').show();
             });
+        }
+
+        var removeFromCart = function removeFromCart (event) {
+            var itemId = $(event.target).parents('form').find('.item-id-input').val();
+            $.post('removeCart.php', {'itemId': itemId}, function(data) {
+                console.log(data);
+                $(event.target).parents('form').find('.remove-cart-btn').hide();
+                $(event.target).parents('form').find('.cart-btn').show();
+            });
+            
         }
 </script>
