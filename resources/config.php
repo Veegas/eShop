@@ -58,6 +58,5 @@ error_reporting(E_ALL|E_STRCT);
     if (!$conn) {
         die('connection problem ! -->' . mysqli_error());
     } else {
-        echo "CONNECTED TO DATABASE";
     }
 ?>
