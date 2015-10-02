@@ -11,7 +11,7 @@
 $config = array(
     "db" => array(
         "db1" => array(
-            "dbname" => "eshopDb",
+            "dbname" => "eShop",
             "username" => "reesha",
             "password" => "reeshaeshop",
             "host" => "localhost"
