@@ -7,13 +7,13 @@
 	<?php
 		$query = "SELECT Product.photo, Product.product_name, Product.description, Product.price, 
 					User_Product_Purchase.date, User_Product_Purchase.quantity 
-					FROM Product INNER JOIN User_Product_Purchase ON Product.ID = User_Product_Purchase.product_id"; //where user=session
+					FROM Product INNER JOIN User_Product_Purchase ON Product.ID = User_Product_Purchase.product_id 
+					WHERE User_Product_Purchase.user_id = $_SESSION["user"]";
 		$result = mysqli_query($conn, $query);
 	?>
 				<table class="bordered centered" id="history-table">
 		        <thead>
 		          <tr> 
-		          	
 		              <th data-field="photo"></th>
 		              <th data-field="name">Item Name</th>
 		              <th data-field="description">Description</th>

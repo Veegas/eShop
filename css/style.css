@@ -102,3 +102,7 @@
     max-height: 100%;
     max-width: 100%;
 }
+
+#checkout-quantity{
+    width: 0.5%;
+}
