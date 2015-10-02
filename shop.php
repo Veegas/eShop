@@ -1,7 +1,3 @@
-
-<?php
-?>
-
 <?php    
     // load up your config file
     require_once("./resources/config.php");
@@ -12,22 +8,31 @@
 
 
 <div class ="container">
+    <div class="row">
+        
   <?php 
 
         $query = "SELECT * FROM Product ";
         $result = mysqli_query($conn, $query);
     if ($result) {
-        echo "RESULT WOWO";
-        // output data of each row
+            // output data of each row
         while($row = mysqli_fetch_assoc($result)) {
-            echo "id: " . $row["ID"]. " - Name: " . $row["product_name"]. "<br>";
+?>  
+             <div class="col s12 md6 l4 ">
+              <h3>
+              <?php echo $row["product_name"] ?>
+              </h3>
+              <img src="<?php echo $row['photo']; ?>" alt="" width="100%" height="auto">
+            </div>
+           <?php 
         }
     } else {
         echo "No results";
     }
+     ?> 
 
 
-   ?>  
+    </div>
 </div>
 
 <?php
