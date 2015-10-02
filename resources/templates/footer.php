@@ -16,7 +16,7 @@
     </div>
   </footer>
 	<script type="text/javascript" src="<?php echo LIBRARY_PATH ?>/jquery/jquery.js"></script>
-	<script type="text/javascript" src="<?php echo LIBRARY_PATH ?>/materialize/js/materialize.min.js"></script>
+	<script type="text/javascript" src="<?php echo LIBRARY_PATH ?>/materialize/js/materialize.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

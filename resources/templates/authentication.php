@@ -1,4 +1,3 @@
-<div class="container">
     <div class="row">
         <div class="col s12">
             <ul class="tabs auth-tabs">
@@ -30,7 +29,7 @@
                                 </div>
                                 <div class="input-field col s6">
                                     <label for="add-avatar">Add Avatar</label>
-                                    <a class="btn-floating btn-large waves-effect waves-light deep-orange" id="add-avatar"><i class="material-icons">add</i></a>
+                                    <a class="btn-floating btn-large waves-effect waves-light deep-orange" id="add-avatar"><i class="material-icons"></i></a>
                                 </div>
                             </div>
                             <div class="row">
@@ -46,7 +45,7 @@
                             <div class="row">
                                 <div class="input-field col s6">
                                     <button class="btn waves-effect waves-light" type="submit" name="action">Signup
-                                                <i class="material-icons right">send</i>
+                                                <i class="material-icons right"></i>
                                     </button>
                                 </div>
                             </div>                            
@@ -75,7 +74,7 @@
                             <div class="row">
                                 <div class="input-field col s6">
                                     <button class="btn waves-effect waves-light" type="submit" name="action">Login
-                                                <i class="material-icons right">send</i>
+                                                <i class="material-icons right"></i>
                                     </button>
                                 </div>
                             </div>
@@ -84,4 +83,3 @@
                 </div>
             </div>
         </div>
-</div>
