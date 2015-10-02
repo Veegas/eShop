@@ -1,3 +1,5 @@
+    <div>
+
     <div class="row">
         <div class="col s12">
             <ul class="tabs auth-tabs">
@@ -12,38 +14,40 @@
                 <div class="card-content white-text">
                     <div class="row">
                         <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="first_name" type="text" class="validate">
+                            <div class="row row-edited">
+                                <div class="div-input-half-left">
                                     <label for="first_name">First Name</label>
+                                    <input id="first_name"  type="text" class="validate input-position">
+
                                 </div>
-                                <div class="input-field col s6">
-                                    <input id="last_name" type="text" class="validate">
+                                <div class="div-input-half">
                                     <label for="last_name">Last Name</label>
+
+                                    <input id="last_name" type="text" class="validate input-position" >
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="email" type="email" class="validate">
+                            <div class="row row-edited">
+                                <div class="div-input-half-left">
                                     <label for="email">Email</label>
+                                    <input id="email" type="email" class="validate input-position">
                                 </div>
-                                <div class="input-field col s6">
+                                <div class="div-input-half">
                                     <label for="add-avatar">Add Avatar</label>
-                                    <a class="btn-floating btn-large waves-effect waves-light deep-orange" id="add-avatar"><i class="material-icons"></i></a>
+                                   <input type="file" name="fileToUpload" id="add-avatar" class="input-position">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="password" type="password" class="validate">
+                            <div class="row row-edited">
+                                <div class="div-input-half-left">
                                     <label for="password">Password</label>
+                                    <input id="password" type="password" class="validate input-position">
                                 </div>
-                                <div class="input-field col s6">
-                                    <input id="password-confirm" type="password" class="validate">
+                                <div class="div-input-half">
                                     <label for="password-confirm">Confirm password</label>
+                                    <input id="password-confirm" type="password" class="validate input-position">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s6">
+                            <div class="row row-edited">
+                                <div class="div-submit">
                                     <button class="btn waves-effect waves-light" type="submit" name="action">Signup
                                                 <i class="material-icons right"></i>
                                     </button>
@@ -57,22 +61,22 @@
         <div id="login" class="col s12">
             <div class="card">
                 <div class="card-content white-text">
-                    <div class="row">
+                    <div class="row row-edited">
                         <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="email" type="email" class="validate">
+                            <div class="row row-edited">
+                                <div class="input-full">
                                     <label for="email">Email</label>
+                                    <input id="email" type="email" class="validate input-position">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="password" type="password" class="validate">
+                            <div class="row row-edited">
+                                <div class="input-full">
                                     <label for="password">Password</label>
+                                    <input id="password" type="password" class="validate input-position">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s6">
+                            <div class="row row-edited">
+                                <div class="div-submit">
                                     <button class="btn waves-effect waves-light" type="submit" name="action">Login
                                                 <i class="material-icons right"></i>
                                     </button>
@@ -83,3 +87,5 @@
                 </div>
             </div>
         </div>
+        
+    </div>
