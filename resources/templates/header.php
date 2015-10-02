@@ -5,6 +5,8 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
 	  <link href="<?php echo LIBRARY_PATH ?>/materialize/css/materialize.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	  	  
 <!--  	  <link href="resources/library/materialize/css/materialize.min.css" rel="stylesheet" type="text/css" />
  -->
@@ -20,7 +22,9 @@
     <body>
 
 <nav class="teal lighten-1 header-style" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="<?php echo IMG_PATH ?>/feather.svg">Reesha</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">
+    <!-- <img src="<?php echo IMG_PATH ?>/feather.svg"> -->
+    Reesha</a>
       <!-- <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>

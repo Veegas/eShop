@@ -33,6 +33,7 @@
     left: 35%;
 }
 
+<<<<<<< HEAD
 .nav-auth {}
 
 #login-btn {
@@ -69,4 +70,17 @@
     float: right;
     margin-right: 7%;
     margin-top: 4%;
+
+}
+.products-item {
+    height: 400px;
+}
+.products-row {
+    margin-top: 5%;
+}
+.products-img {
+    width: auto;
+    height: 70%;
+    max-height: 100%;
+    max-width: 100%;
 }
