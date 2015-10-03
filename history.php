@@ -1,6 +1,5 @@
 <?php
 	require_once("./resources/config.php");
-	         session_start();
 
 	require_once(TEMPLATES_PATH . "/header.php");
 ?>

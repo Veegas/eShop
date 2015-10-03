@@ -1,7 +1,6 @@
 <?php    
     // load up your config file
     require_once("./resources/config.php");
-         session_start();
 
     require_once(TEMPLATES_PATH . "/header.php");
     // require_once(TEMPLATES_PATH . "/authentication.php");
@@ -14,16 +13,7 @@
 </script>
 
 <div class ="container">
-      <?php 
-      if(isset($_SESSION['user'])){
-      echo $_SESSION['user']['first_name'];
-  }
-  if(isset($_SESSION['print'])){
-      echo $_SESSION['print'];
-  }
-
-  // session_destroy();
-      ?>    
+       
     <div class="row products-row">
         
   <?php 

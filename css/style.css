@@ -64,6 +64,14 @@
     padding-right: 1%;
 }
 
+#profile-btn {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
 .div-input-half-left {
     width: 40%;
     display: inline-block;
@@ -109,3 +117,4 @@
     width: 0.5%;
     cursor: pointer;
 }
+

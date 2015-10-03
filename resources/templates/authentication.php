@@ -50,7 +50,12 @@ else {
             if ($result->num_rows == 1) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    $_SESSION['user'] = $row;
+                    $_SESSION['user'] = $row["ID"];
+                    $_SESSION['first_name']= $row["first_name"];
+                    $_SESSION['last_name']= $row["last_name"];
+                    $_SESSION['email']= $row["email"];
+                    $_SESSION['password']= $row["password"];
+
                     header("Location: index.php"); /* Redirect browser */
                     exit();
                 }

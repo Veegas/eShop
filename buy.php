@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     // load up your config file
     require_once("./resources/config.php");
 

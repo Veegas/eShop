@@ -22,7 +22,7 @@
     <body>
 
 <nav class="teal lighten-1 header-style" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo">
     <!-- <img src="<?php echo IMG_PATH ?>/feather.svg"> -->
     Reesha</a>
       <!-- <ul class="right hide-on-med-and-down">
@@ -34,6 +34,7 @@
       </ul> -->
 <!--       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
  -->      
+<?php if(!isset($_SESSION['user'])) { ?>
   <a class="waves-effect waves-light btn modal-trigger right deep-orange" id="login-btn" href="#modal1">Login/Signup</a>
 
   <!-- Modal Structure -->
@@ -43,6 +44,18 @@
  ?>
     </div>
   </div>
-          
+  <?php } else { ?>
+
+
+  <a class='dropdown-button btn right deep-orange' href='#' id="profile-btn" data-activates='dropdown1'><?php echo  $_SESSION['first_name']; ?>  &darr;</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="history.php">History</a></li>
+    <li><a href="editInfo.php">Edit Info</a></li>
+    <li class="divider"></li>
+    <li><a href="resources/logic/logout.php">Logout</a></li>
+  </ul>
+          <?php } ?>
  </div>
   </nav>
