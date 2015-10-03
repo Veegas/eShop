@@ -12,6 +12,9 @@ $myavatar =  mysqli_real_escape_string($conn,$_POST['avatar']);
 $myfirstname =  mysqli_real_escape_string($conn,$_POST['first_name']);
 $mylastname =  mysqli_real_escape_string($conn,$_POST['last_name']);
 
+move_uploaded_file ($_FILES['avatar'] ['tmp_name'], "img/content/{$_FILES['avatar'] ['name']}");
+
+
 if($mypassword == $myconfirmpass){
 $sql="INSERT INTO User (email, ID, password, first_name, last_name, avatar) VALUES ('$myemail', 'NULL', '$mypassword', '$myfirstname', '$mylastname', '$myavatar')";
 
@@ -24,7 +27,11 @@ $result = $conn->query($sql);
 if ($result->num_rows == 1) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $_SESSION['user'] = $row["ID"];
+                    $_SESSION['user'] = $row["ID"];
+                    $_SESSION['first_name']= $row["first_name"];
+                    $_SESSION['last_name']= $row["last_name"];
+                    $_SESSION['email']= $row["email"];
+                    $_SESSION['password']= $row["password"];
          header("Location: index.php"); /* Redirect browser */
         exit();        
     }
@@ -123,7 +130,7 @@ else {
                             </div>
                             <div class="row row-edited">
                                 <div class="div-submit">
-                                    <button class="btn waves-effect waves-light" type="submit" name="action">Signup
+                                    <button class="btn waves-effect waves-light" type="submit" id="signup-submit" name="action">Signup
                                                 <i class="material-icons right"></i>
                                     </button>
                                 </div>
