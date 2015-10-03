@@ -5,6 +5,7 @@
 
 	require_once(TEMPLATES_PATH . "/header.php");
 				$total_price=0;
+				$temp=0;
 	
 ?>
 <div class="container">
@@ -15,7 +16,6 @@
           <th data-field="name">Item Name</th>
           <th data-field="description">Description</th>
           <th data-field="price">Item Price</th>
-          <th data-field="quantity">Quantity</th>
           <th data-filed="total">Total</th>
       </tr>
     </thead>
@@ -23,8 +23,10 @@
 			//get cart items from session
 			if (isset($_SESSION["cart"])){
 				$cart_products = $_SESSION["cart"];
-				while (isset($cart_products)) {
-					$popped= array_pop($cart_paroducts);
+				foreach ($cart_products as $popped) {
+				 	# code...
+				 
+					//$popped= array_pop($cart_paroducts);
 					$query = "SELECT * FROM Product WHERE Product.ID=".$popped;
 					$result = mysqli_query($conn, $query);
 					if ($result) {
@@ -36,21 +38,23 @@
 			            <td id= "history-name"><?php echo $row["product_name"]?></td>
 			            <td id="history-description"><?php echo $row["description"]?></td>
 			            <td><?php echo "$ ".$row["price"]?></td>
-			            <td id="checkout-quantity"><input value="1" type="number" min="1"></td>
 		     			<?php $total_price+= $row["price"];
 					}
 				}
 			}
 					?>
-		            <td ><?php echo "$ ".$total_price?></td>
 		          </tr>
+		            <tr><td></td><td></td><td></td><td></td><td></td>
+		            <td ><?php echo "$ ".$total_price?></td></tr>
 				</tbody>
 				</table>
 				<br><br>
 	<form action="buy.php" method="POST">
-		<input type="hidden" name="product_cart" value="<?php ?>">
+		
 			
-		<a class="waves-effect waves-light btn right" type="submit"><i class="material-icons right">submit</i>Proceed to Checkout</a>
+		 <button class="btn waves-effect waves-light right" type="submit" name="action">Proceed to Checkout
+    <i class="material-icons right">send</i>
+  </button>
 	</form>
 	<br><br>
 
