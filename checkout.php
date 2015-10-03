@@ -38,6 +38,11 @@
 			            <td id= "history-name"><?php echo $row["product_name"]?></td>
 			            <td id="history-description"><?php echo $row["description"]?></td>
 			            <td><?php echo "$ ".$row["price"]?></td>
+			            <td>
+		                   <button class="btn-floating waves-effect waves-light left remove-cart-btn deep-orange" type="button" onclick="removeFromCart(event, <?php echo $row["ID"] ?>);" >
+                                <i class="material-icons right">remove_circle_outline</i>
+                            </button>
+                         </td>
 		     			<?php $total_price+= $row["price"];
 					}
 				}
@@ -62,3 +67,14 @@
 <?php
 	require_once(TEMPLATES_PATH . "/footer.php");
 ?>
+
+<script>
+	
+        var removeFromCart = function removeFromCart (event, itemId) {
+            $.post('removeCart.php', {'itemId': itemId}, function(data) {
+                console.log(data);
+                $(event.target).parents("tr").remove();
+            });
+            
+        }
+</script>

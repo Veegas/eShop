@@ -24,7 +24,7 @@
             // output data of each row
         while($row = mysqli_fetch_assoc($result)) {
 ?>  
-    <form class="buy-form" action="buy.php" method="post" onsubmit=<?php if (!isset($_SESSION["user"])) { echo "'event.preventDefault(); signIn();'"; } ?>>
+    <form class="buy-form" action="checkout.php" method="post">
         <div class="col s4 md4 l4 ">
         <input class="item-id-input" type="text" name="item-id" value="<?php echo $row["ID"]; ?>" hidden>
 
@@ -46,7 +46,7 @@
             <div class="card-action">
                     <tr>
                     <td class="left">
-                            <button class="btn-floating waves-effect waves-light left <?php if ($row["quantity"] <= 0) { echo "disabled";}?>
+                            <button class="btn-floating waves-effect waves-light cart-btn left <?php if ($row["quantity"] <= 0) { echo "disabled";}?>
 " type="button" onclick="<?php if ($row["quantity"] > 0) { echo "addToCart(event);";}?>"> 
                                 <i class="material-icons right">add_shopping_cart</i>
                             </button>
