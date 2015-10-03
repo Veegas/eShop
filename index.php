@@ -46,7 +46,8 @@
             <div class="card-action">
                     <tr>
                     <td class="left">
-                            <button class="btn-floating waves-effect waves-light left cart-btn" type="button" onclick="addToCart(event);">
+                            <button class="btn-floating waves-effect waves-light left <?php if ($row["quantity"] <= 0) { echo "disabled";}?>
+" type="button" onclick="<?php if ($row["quantity"] > 0) { echo "addToCart(event);";}?>"> 
                                 <i class="material-icons right">add_shopping_cart</i>
                             </button>
                             <button class="btn-floating waves-effect waves-light left remove-cart-btn deep-orange" type="button" onclick="removeFromCart(event);" style="display: none" >
