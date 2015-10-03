@@ -16,6 +16,7 @@
           <th data-field="name">Item Name</th>
           <th data-field="description">Description</th>
           <th data-field="price">Item Price</th>
+          <th data-field="quantity"> Quantity </th>
           <th data-filed="total">Total</th>
       </tr>
     </thead>

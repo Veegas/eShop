@@ -1,5 +1,6 @@
 <?php
 	require_once("./resources/config.php");
+	         session_start();
 
 	require_once(TEMPLATES_PATH . "/header.php");
 ?>
@@ -8,7 +9,7 @@
 		$query = "SELECT Product.photo, Product.product_name, Product.description, Product.price, 
 					User_Product_Purchase.date, User_Product_Purchase.quantity 
 					FROM Product INNER JOIN User_Product_Purchase ON Product.ID = User_Product_Purchase.product_id 
-					WHERE User_Product_Purchase.user_id = $_SESSION["user"]";
+					WHERE User_Product_Purchase.user_id = " . $_SESSION['user'] . ";";
 		$result = mysqli_query($conn, $query);
 	?>
 				<table class="bordered centered" id="history-table">

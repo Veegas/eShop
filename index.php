@@ -24,7 +24,7 @@
             // output data of each row
         while($row = mysqli_fetch_assoc($result)) {
 ?>  
-    <form class="buy-form" action="checkout.php" method="post">
+    <form class="buy-form" action="checkout.php" method="post"  <?php if (!isset($_SESSION['user'])) { echo "onsubmit='event.preventDefault(); signIn();'";} ?>> 
         <div class="col s4 md4 l4 ">
         <input class="item-id-input" type="text" name="item-id" value="<?php echo $row["ID"]; ?>" hidden>
 
@@ -39,8 +39,10 @@
             </div>
 
             <div class="card-reveal">
-              <span class="card-title black-text"> <?php echo $row["product_name"] ?> </span>
+              <span class="card-title black-text"> <?php echo $row["product_name"] ?>
+             </span>
               <p> <?php echo $row["description"] ?> </p>
+             <p> <?php echo $row["quantity"]; ?> Left in Stock  </p>
                                 
             </div>
             <div class="card-action">
