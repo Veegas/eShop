@@ -36,7 +36,14 @@ echo 'Success... ' . $mysqli->host_info . "\n";
 
 <div class ="container">
 
-          
+      <?php 
+      if(isset($_SESSION['user'])){
+      echo $_SESSION['user']['first_name'];
+  }
+  if(isset($_SESSION['print'])){
+      echo $_SESSION['print'];
+  }
+      ?>    
 </div>
 
 <?php

@@ -60,4 +60,6 @@ error_reporting(E_ALL|E_STRCT);
     } else {
         echo "CONNECTED TO DATABASE";
     }
+
+    session_start();
 ?>

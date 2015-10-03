@@ -30,7 +30,9 @@
 
 #add-avatar {
     position: relative;
-    left: 35%;
+    top: -13px;
+    /* top: -4px; */
+    /* left: 35%; */
 }
 
 <<<<<<< HEAD
